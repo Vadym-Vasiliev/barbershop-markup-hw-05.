@@ -90,7 +90,7 @@ img {
     margin-left: auto;
     margin-right: auto;
 
-    outline: 1px solid tomato;
+    /* outline: 1px solid tomato; */
 }
 
 .btn {
@@ -143,10 +143,12 @@ img {
 
 /* ---------------HEADER----------------- */
 .header {
+    position: absolute;
+    width: 100%;
     padding-top: 32px;
     padding-bottom: 32px;
 
-    background-color: #ccc;
+    
 }
 
 .header>.container {
@@ -225,8 +227,44 @@ img {
     display: flex;
 }
 
+.hero-soc{
+    width: 93px;   
+    display: flex;
+    align-items: flex-end; 
+    padding-left: 24px;
+    padding-bottom: 40px;
+}
+
 .hero .list-hero {
     width: 93px;
+    display: flex;
+    transform: rotate(-90deg) translate(-19px);
+    transform-origin: top left;
+    
+}
+
+
+.item-hero{
+    display: flex;
+    align-items: center;
+}
+
+
+.list-hero .item-hero:not(:last-child){
+    margin-right: 40px;
+}
+
+.item-hero.before-line::before {
+    content: "";
+    width: 60px;
+    height: 1px;
+    top: 0;
+    left: 0;
+    margin-right: 40px;
+
+    background-color: #303030;
+    
+
 }
 
 .list-hero .link-hero {
@@ -238,6 +276,7 @@ img {
 
     color: var(--main-text);
 }
+
 
 .list-hero .link-hero:hover,
 .list-hero .link-hero:focus {
@@ -337,7 +376,7 @@ img {
     left: 0;
     margin-right: 21px;
 
-    background-color: rgba(157, 164, 189, 0.6);
+    background-color: #303030;
 }
 
 .about-us-content {
@@ -504,7 +543,7 @@ img {
     left: 0;
     margin-right: 21px;
 
-    background-color: rgba(157, 164, 189, 0.6);
+    background-color: #303030;
 }
 
 .feature .title-feature {
@@ -544,7 +583,7 @@ img {
     left: 0;
     margin-right: 21px;
 
-    background-color: rgba(157, 164, 189, 0.6);
+    background-color: #303030;
 
 }
 
@@ -649,7 +688,7 @@ img {
     left: 0;
     margin-right: 21px;
 
-    background-color: rgba(157, 164, 189, 0.6);
+    background-color: #303030;
 }
 
 .list-portfolio {
