@@ -1,0 +1,14 @@
+.header {
+    position: absolute;
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    & > .container{
+      display: flex;
+      align-items: center;
+    }
+
+    
+}
+

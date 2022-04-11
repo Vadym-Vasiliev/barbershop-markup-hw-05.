@@ -1,0 +1,33 @@
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: 1px solid $accent;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    min-width: 160px;
+
+    transition: background-color 250ms $cubic,
+        color 250ms ;
+
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+        background-color: $accent;
+        color: $btn-text-first;
+    }
+}
+
