@@ -1,0 +1,103 @@
+.services {
+  padding-top: 130px;
+  padding-bottom: 130px;
+
+  background-color: #111319;
+  background-image: url(../img/services.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__text {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1em;
+
+    color: $after-line-text;
+
+    &::before {
+      content: '';
+      width: 63px;
+      height: 1px;
+      top: 0;
+      left: 0;
+      margin-right: 21px;
+
+      background-color: rgba(157, 164, 189, 0.6);
+    }
+  }
+
+  &__title {
+    font-family: 'Raleway';
+    margin-bottom: 44px;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.16;
+    letter-spacing: 0.05em;
+
+    color: $h-text-first;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+
+    color: $btn-text-first;
+  }
+}
+
+// SERVICES_BLOCKS
+
+.services-blocks {
+  display: flex;
+
+  &__list {
+    flex-grow: 1;
+    margin-bottom: 50px;
+    padding: 30px 40px;
+
+    &--light-services {
+      background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+    }
+
+    &--dark-services {
+      background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      content: '';
+      flex-grow: 1;
+      height: 1px;
+      margin-right: 6px;
+      margin-left: 6px;
+
+      background-color: rgba(157, 164, 189, 0.12);
+    }
+  }
+
+  &__pre {
+    @include services-text;
+
+    &:first-child {
+      order: -1;
+    }
+  }
+
+  &__after {
+    @include services-text;
+  }
+}

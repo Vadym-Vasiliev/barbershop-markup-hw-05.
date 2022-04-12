@@ -1,14 +1,71 @@
 .header {
-    position: absolute;
-    width: 100%;
-    padding-top: 32px;
-    padding-bottom: 32px;
+  position: absolute;
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
-    & > .container{
-      display: flex;
-      align-items: center;
+  & > .container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    color: $main-text;
+    display: block;
+  }
+
+  &__svg {
+    display: block;
+    fill: currentColor;
+
+    transition: color 250ms $cubic;
+
+    .header__logo:hover &,
+    .header__logo:focus & {
+      color: $accent;
     }
-
-    
+  }
 }
 
+// HEADER_NAV
+
+.header-nav {
+  &__list {
+    display: flex;
+    margin-left: 70px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  &__link {
+    @include header-link;
+
+    &:hover,
+    &:focus {
+      color: $accent;
+    }
+  }
+}
+
+// HEADER_AUTH
+
+.header-auth {
+  margin-left: auto;
+
+  &__link {
+    @include header-link;
+
+    &:hover,
+    &:focus {
+      color: $accent;
+    }
+  }
+
+  &__btn {
+    margin-left: 40px;
+
+    color: $btn-text-first;
+  }
+}

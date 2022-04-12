@@ -1,0 +1,33 @@
+.portfolio {
+  padding-top: 130px;
+  padding-bottom: 130px;
+
+  &__text {
+    margin-bottom: 44px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    &::before {
+      content: '';
+      width: 63px;
+      height: 1px;
+      top: 0;
+      left: 0;
+      margin-right: 21px;
+
+      background-color: $main-text;
+    }
+  }
+
+  &__list {
+    display: flex;
+    margin-left: -30px;
+  }
+
+  &__item {
+    width: calc(100% / 4 - 30px);
+    margin-left: 30px;
+  }
+}

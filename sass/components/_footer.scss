@@ -1,0 +1,59 @@
+.footer {
+  padding-top: 57px;
+  padding-bottom: 55px;
+
+  background-color: $bgc-footer;
+
+  & > .container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    @include footer-same;
+  }
+
+  &__list {
+    display: flex;
+    margin-left: auto;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    &--line::before {
+      display: block;
+      content: '';
+      width: 63px;
+      height: 1px;
+      top: 0;
+      left: 0;
+      margin-right: 40px;
+
+      background-color: $main-text;
+    }
+  }
+
+  &__link {
+    @include footer-same;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    display: flex;
+    align-items: center;
+
+    transition: color 250ms linear;
+
+    color: var(--main-text);
+
+    &:hover,
+    &:focus {
+      color: $accent;
+    }
+  }
+}

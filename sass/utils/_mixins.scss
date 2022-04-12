@@ -1,0 +1,44 @@
+@mixin header-link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+
+  transition: color 250ms linear;
+
+  color: $nav-text;
+}
+
+@mixin services-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+
+  color: $gray-text;
+}
+
+@mixin contacts-form {
+  font-size: 16px;
+  line-height: 1.36;
+  letter-spacing: 0.02em;
+  padding: 10px;
+  width: 270px;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  outline: none;
+
+  background-color: transparent;
+  color: #fff;
+}
+
+@mixin footer-same {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  display: block;
+  letter-spacing: 0.2em;
+
+  color: $gray-text;
+}

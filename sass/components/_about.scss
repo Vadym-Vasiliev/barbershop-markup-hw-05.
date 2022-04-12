@@ -1,0 +1,77 @@
+.about {
+  padding-top: 139px;
+  padding-bottom: 121px;
+
+  & > .container {
+    display: flex;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    width: 270px;
+
+    & + & {
+      margin-left: 30px;
+    }
+  }
+
+  &__img {
+    height: 100%;
+  }
+}
+
+// ABOUT_BOX
+
+.about-box {
+  margin-left: 64px;
+
+  &__top {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+
+    &::before {
+      content: '';
+      width: 63px;
+      height: 1px;
+      top: 0;
+      left: 0;
+      margin-right: 21px;
+
+      background-color: $main-text;
+    }
+  }
+
+  &__title {
+    font-family: 'Raleway';
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+
+    color: $h-text-second;
+  }
+
+  &__bottom {
+    margin-bottom: 20px;
+    letter-spacing: 0.02em;
+
+    color: $second-text;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.86;
+    margin-bottom: 40px;
+    letter-spacing: 0.02em;
+
+    color: $second-text;
+  }
+
+  &__btn {
+    color: $main-text;
+  }
+}

@@ -1,0 +1,118 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transition: opacity 250ms $cubic;
+
+  background-color: rgba(204, 204, 204, 0.5);
+
+  &--is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
+
+.backdrop-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+  opacity: 1;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transition: transform 250ms $cubic, opacity 250ms $cubic, visibility 250ms $cubic;
+
+  background-color: #fff;
+
+  & {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+// MODAL_FORM
+
+.backdrop-modal__btn {
+  padding: 12px 20px;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  min-width: 160px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    background-color: $accent;
+    color: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  &--close {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+  }
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+
+  &__field {
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 2px;
+    border-color: #ccc;
+    margin-bottom: 30px;
+  }
+
+  &__label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: block;
+    transform: translateY(0);
+
+    transition: transform 250ms $cubic;
+
+    .modal-form__input:focus + &,
+    .modal-form__input:not(:placeholder-shown) + & {
+      transform: translateY(-30px);
+      color: $accent;
+    }
+  }
+
+  &__textarea {
+    display: block;
+    height: 250px;
+    width: 100%;
+    resize: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 2px;
+    border-color: #ccc;
+  }
+}

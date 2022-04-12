@@ -1,0 +1,126 @@
+// CONTACTS_WRAP
+
+.contacts-wrap {
+  background-color: #191c26;
+  background-image: url(../img/online.png);
+  background-repeat: no-repeat;
+  background-size: calc(100% / 2 - 15px) 100%;
+  background-position: right;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+
+  & > .container {
+    display: flex;
+  }
+}
+
+// ONLINE
+
+.online {
+  width: calc((100% / 2) + 15px);
+  padding-top: 130px;
+  padding-bottom: 130px;
+
+  background-color: $bgc-online;
+
+  &__title {
+    margin-bottom: 44px;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.16;
+    letter-spacing: 0.05em;
+
+    color: $h-text-first;
+  }
+
+  &__btn {
+    color: $btn-text-first;
+  }
+}
+
+// ONLINE_FORM
+
+.contacts-form {
+  margin-bottom: 44px;
+
+  &__wrap {
+    display: flex;
+    margin-bottom: 44px;
+  }
+
+  &__field:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__field {
+    position: relative;
+  }
+
+  &__input {
+    @include contacts-form;
+
+    &--tel {
+      width: 260px;
+    }
+
+    .contacts-form__field:hover & {
+      color: #fff;
+      border-color: #fff;
+    }
+  }
+
+  &__span {
+    position: absolute;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 1.36;
+    display: block;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    transition: color 250ms linear, transform 250ms linear, border-color 250ms linear;
+
+    color: rgba(157, 164, 189, 0.4);
+
+    .contacts-form__input:focus + &,
+    .contacts-form__input:not(:placeholder-shown) + & {
+      color: #fff;
+      transform: translateY(-35px);
+    }
+
+    .contacts-form__field:hover & {
+      color: #fff;
+      border-color: #fff;
+    }
+  }
+
+  &__textarea {
+    @include contacts-form;
+
+    resize: none;
+    width: 560px;
+    height: 76px;
+    margin-bottom: 44px;
+    padding: 8px 8px 8px 4px;
+
+    transition: border-color 250ms linear;
+
+    &::placeholder {
+      text-transform: uppercase;
+      font-style: normal;
+      font-size: 12px;
+      line-height: 1.36;
+
+      color: rgba(157, 164, 189, 0.4);
+    }
+
+    .contacts-form__text-field:hover &,
+    .contacts-form__text-field:focus & {
+      border-color: #fff;
+    }
+  }
+}
