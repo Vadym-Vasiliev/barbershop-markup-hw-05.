@@ -928,7 +928,7 @@ line-height: 1.36;
   padding-left: 100px;
 }
 
-.contacts__title {
+.contacts__title   {
   margin-bottom: 40px;
   font-family: 'Raleway';
 
@@ -948,7 +948,7 @@ line-height: 1.36;
   align-items: center;
 }
 
-.contacts__link{
+.contacts__link  {
   font-style: normal;
   display: flex;
   align-items: center;
