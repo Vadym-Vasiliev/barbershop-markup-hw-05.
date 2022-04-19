@@ -1,6 +1,16 @@
 .services {
-  padding-top: 130px;
-  padding-bottom: 130px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+  @media screen and (max-width: 1199px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @media screen and (max-width: 767px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 
   background-color: #111319;
   background-image: url(../img/services.png);
@@ -15,7 +25,12 @@
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
     letter-spacing: 0.1em;
+    text-transform: uppercase;
 
     color: $after-line-text;
 
@@ -54,18 +69,38 @@
 
 .services-blocks {
   display: flex;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
 
   &__list {
     flex-grow: 1;
-    margin-bottom: 50px;
     padding: 30px 40px;
 
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+    }
+
     &--light-services {
-      background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+      @media screen and (min-width: 1200px) {
+        background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+      }
+      @media screen and (max-width: 1199px) {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
     }
 
     &--dark-services {
-      background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+      @media screen and (min-width: 1200px) {
+        background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+      }
+
+      @media screen and (max-width: 1199px) {
+        padding-top: 15;
+      }
     }
   }
 
