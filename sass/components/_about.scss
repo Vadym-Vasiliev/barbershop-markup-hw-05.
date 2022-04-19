@@ -15,7 +15,9 @@
   }
 
   & > .container {
-    display: flex;
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
   }
 
   &__list {
@@ -49,6 +51,10 @@
     @media screen and(max-width:1199px) {
       width: 330px;
       height: 235px;
+    }
+
+    @media screen and (max-width: 767px) {
+      display: none;
     }
   }
 }
