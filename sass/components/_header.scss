@@ -12,6 +12,10 @@
   &__logo {
     color: $main-text;
     display: block;
+
+    @media screen and (max-width: 1199px) {
+      margin-top: -35px;
+    }
   }
 
   &__svg {
@@ -31,8 +35,17 @@
 
 .header-nav {
   &__list {
-    display: flex;
-    margin-left: 70px;
+    @media screen and (max-width: 1199px) {
+      display: flex;
+      margin-left: 50px;
+      margin-right: 68px;
+      margin-top: -30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      margin-left: 70px;
+    }
   }
 
   &__item:not(:last-child) {
@@ -52,7 +65,15 @@
 // HEADER_AUTH
 
 .header-auth {
-  margin-left: auto;
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+  }
 
   &__link {
     @include header-link;
@@ -64,7 +85,14 @@
   }
 
   &__btn {
-    margin-left: 40px;
+    @media screen and (max-width: 1199px) {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-left: 40px;
+    }
 
     color: $btn-text-first;
   }

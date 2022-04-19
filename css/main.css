@@ -311,11 +311,28 @@ img {
 }
 
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .btn {
@@ -356,6 +373,12 @@ img {
   display: block;
 }
 
+@media screen and (max-width: 1199px) {
+  .header__logo {
+    margin-top: -35px;
+  }
+}
+
 .header__svg {
   display: block;
   fill: currentColor;
@@ -367,9 +390,20 @@ img {
   color: #ff6c00;
 }
 
-.header-nav__list {
-  display: flex;
-  margin-left: 70px;
+@media screen and (max-width: 1199px) {
+  .header-nav__list {
+    display: flex;
+    margin-left: 50px;
+    margin-right: 68px;
+    margin-top: -30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-nav__list {
+    display: flex;
+    margin-left: 70px;
+  }
 }
 
 .header-nav__item:not(:last-child) {
@@ -389,8 +423,18 @@ img {
   color: #ff6c00;
 }
 
-.header-auth {
-  margin-left: auto;
+@media screen and (max-width: 1199px) {
+  .header-auth {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-auth {
+    margin-left: auto;
+  }
 }
 
 .header-auth__link {
@@ -407,8 +451,20 @@ img {
 }
 
 .header-auth__btn {
-  margin-left: 40px;
   color: #ffffff;
+}
+
+@media screen and (max-width: 1199px) {
+  .header-auth__btn {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-auth__btn {
+    margin-left: 40px;
+  }
 }
 
 .hero > .container {
@@ -530,51 +586,47 @@ img {
   height: 100%;
 }
 
-.about-box {
-  margin-left: 64px;
-}
-
-.about-box__top {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.02em;
-}
-
-.about-box__top::before {
-  content: '';
-  width: 63px;
-  height: 1px;
-  top: 0;
-  left: 0;
-  margin-right: 21px;
-  background-color: #303030;
-}
-
-.about-box__title {
-  font-family: 'Raleway';
-  margin-bottom: 20px;
-  letter-spacing: 0.05em;
-  color: #303030;
-}
-
-.about-box__bottom {
-  margin-bottom: 20px;
-  letter-spacing: 0.02em;
-  color: #555555;
-}
-
-.about-box__text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.86;
-  margin-bottom: 40px;
-  letter-spacing: 0.02em;
-  color: #555555;
-}
-
-.about-box__btn {
-  color: #303030;
+@media screen and (min-width: 1200px) {
+  .about-box {
+    margin-left: 64px;
+  }
+  .about-box__top {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+  }
+  .about-box__top::before {
+    content: '';
+    width: 63px;
+    height: 1px;
+    top: 0;
+    left: 0;
+    margin-right: 21px;
+    background-color: #303030;
+  }
+  .about-box__title {
+    font-family: 'Raleway';
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+    color: #303030;
+  }
+  .about-box__bottom {
+    margin-bottom: 20px;
+    letter-spacing: 0.02em;
+    color: #555555;
+  }
+  .about-box__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.86;
+    margin-bottom: 40px;
+    letter-spacing: 0.02em;
+    color: #555555;
+  }
+  .about-box__btn {
+    color: #303030;
+  }
 }
 
 .services {
@@ -756,41 +808,40 @@ img {
   color: #ff6c00;
 }
 
-.feature-right__pre {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.1em;
-}
-
-.feature-right__pre::before {
-  content: '';
-  width: 63px;
-  height: 1px;
-  top: 0;
-  left: 0;
-  margin-right: 21px;
-  background-color: #303030;
-}
-
-.feature-right__title {
-  font-family: 'Raleway';
-  margin-bottom: 20px;
-  width: 483px;
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.16;
-  letter-spacing: 0.05em;
-  color: #303030;
-}
-
-.feature-right__after {
-  width: 500px;
-  letter-spacing: 0.02em;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.67;
-  color: #555555;
+@media screen and (min-width: 1200px) {
+  .feature-right__pre {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1em;
+  }
+  .feature-right__pre::before {
+    content: '';
+    width: 63px;
+    height: 1px;
+    top: 0;
+    left: 0;
+    margin-right: 21px;
+    background-color: #303030;
+  }
+  .feature-right__title {
+    font-family: 'Raleway';
+    margin-bottom: 20px;
+    width: 483px;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.16;
+    letter-spacing: 0.05em;
+    color: #303030;
+  }
+  .feature-right__after {
+    width: 500px;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    color: #555555;
+  }
 }
 
 .masters {
