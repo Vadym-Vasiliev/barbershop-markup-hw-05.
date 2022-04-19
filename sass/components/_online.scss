@@ -1,28 +1,58 @@
 // CONTACTS_WRAP
 
 .contacts-wrap {
-  background-color: #191c26;
   background-image: url(../img/online.png);
   background-repeat: no-repeat;
-  background-size: calc(100% / 2 - 15px) 100%;
-  background-position: right;
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
+  background-color: #191c26;
+  background-position: bottom;
+
+  @media screen and(min-width:1200px) {
+    background-size: calc(100% / 2 - 15px) 100%;
+    background-position: right;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and(max-width:1199px) {
+    background-size: contain;
+  }
 
   & > .container {
-    display: flex;
+    @media screen and (max-width: 1199px) {
+      padding: 0;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+
+    @media screen and (max-width: 1199px) {
+      flex-direction: column;
+    }
   }
 }
 
 // ONLINE
 
 .online {
-  width: calc((100% / 2) + 15px);
-  padding-top: 130px;
-  padding-bottom: 130px;
-
   background-color: $bgc-online;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+    width: calc((100% / 2) + 15px);
+  }
+  @media screen and (max-width: 1199px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 
   &__title {
     margin-bottom: 44px;
@@ -36,6 +66,9 @@
   }
 
   &__btn {
+    @media screen and (max-width: 1199px) {
+      display: block;
+    }
     color: $btn-text-first;
   }
 }
@@ -43,8 +76,9 @@
 // ONLINE_FORM
 
 .contacts-form {
-  margin-bottom: 44px;
-
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 44px;
+  }
   &__wrap {
     display: flex;
     margin-bottom: 44px;
@@ -60,9 +94,15 @@
 
   &__input {
     @include contacts-form;
+    @media screen and (max-width: 1199px) {
+      width: 330px;
+    }
 
     &--tel {
       width: 260px;
+      @media screen and (max-width: 1199px) {
+        width: 330px;
+      }
     }
 
     .contacts-form__field:hover & {
@@ -108,6 +148,10 @@
     padding: 8px 8px 8px 4px;
 
     transition: border-color 250ms linear;
+
+    @media screen and (max-width: 1199px) {
+      width: 690px;
+    }
 
     &::placeholder {
       text-transform: uppercase;

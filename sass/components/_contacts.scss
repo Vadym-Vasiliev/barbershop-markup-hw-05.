@@ -1,8 +1,27 @@
 .contacts {
-  padding-top: 130px;
-  padding-bottom: 130px;
   flex-grow: 1;
-  padding-left: 100px;
+  padding-left: 39px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+    padding-left: 100px;
+  }
+  @media screen and (max-width: 1199px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  &__address-wrap {
+    @media screen and (max-width: 1199px) {
+      display: flex;
+    }
+  }
 
   &__title {
     margin-bottom: 40px;
@@ -69,6 +88,9 @@
 
 // CONTACTS_UNDER
 .contacts-under {
+  @media screen and (max-width: 1199px) {
+    margin-left: 120px;
+  }
   &__top {
     font-weight: 600;
     font-size: 11px;
