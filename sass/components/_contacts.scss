@@ -21,6 +21,9 @@
     @media screen and (max-width: 1199px) {
       display: flex;
     }
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+    }
   }
 
   &__title {
@@ -32,6 +35,10 @@
     letter-spacing: 0.05em;
 
     color: $h-text-first;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
 
   &__list {
@@ -90,6 +97,9 @@
 .contacts-under {
   @media screen and (max-width: 1199px) {
     margin-left: 120px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-left: 0;
   }
   &__top {
     font-weight: 600;

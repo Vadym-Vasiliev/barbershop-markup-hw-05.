@@ -69,6 +69,11 @@
     @media screen and (max-width: 1199px) {
       display: block;
     }
+    @media screen and (max-width: 767px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     color: $btn-text-first;
   }
 }
@@ -76,12 +81,18 @@
 // ONLINE_FORM
 
 .contacts-form {
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
   @media screen and (min-width: 1200px) {
     margin-bottom: 44px;
   }
   &__wrap {
     display: flex;
     margin-bottom: 44px;
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+    }
   }
 
   &__field:not(:last-child) {
@@ -98,10 +109,19 @@
       width: 330px;
     }
 
+    @media screen and (max-width: 767px) {
+      width: 418px;
+      margin-bottom: 44px;
+    }
+
     &--tel {
       width: 260px;
       @media screen and (max-width: 1199px) {
         width: 330px;
+      }
+
+      @media screen and (max-width: 767px) {
+        width: 418px;
       }
     }
 
@@ -125,6 +145,10 @@
     transition: color 250ms linear, transform 250ms linear, border-color 250ms linear;
 
     color: rgba(157, 164, 189, 0.4);
+
+    @media screen and (max-width: 767px) {
+      top: 20%;
+    }
 
     .contacts-form__input:focus + &,
     .contacts-form__input:not(:placeholder-shown) + & {
@@ -151,6 +175,10 @@
 
     @media screen and (max-width: 1199px) {
       width: 690px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 418px;
     }
 
     &::placeholder {
