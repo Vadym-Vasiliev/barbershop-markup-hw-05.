@@ -1711,6 +1711,13 @@ img {
   background-color: #f7f7f7;
 }
 
+@media screen and (max-width: 767px) {
+  .footer {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+}
+
 .footer > .container {
   display: flex;
   align-items: center;
@@ -1728,6 +1735,12 @@ img {
 .footer__list {
   display: flex;
   margin-left: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .footer__list {
+    margin-left: 21px;
+  }
 }
 
 .footer__item {
