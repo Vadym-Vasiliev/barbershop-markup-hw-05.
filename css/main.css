@@ -1308,10 +1308,10 @@ img {
 }
 
 .contacts-wrap {
-  background-image: url(../img/online.png);
   background-repeat: no-repeat;
   background-color: #191c26;
   background-position: bottom;
+  background-image: url(../img/online.png);
 }
 
 @media screen and (min-width: 1200px) {
