@@ -1,6 +1,17 @@
 .masters {
-  padding-top: 130px;
-  padding-bottom: 130px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+  @media screen and (max-width: 1199px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 
   background-color: $bgc-masters;
 
@@ -8,7 +19,16 @@
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
     letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 1199px) {
+      justify-content: center;
+    }
 
     &::before {
       content: '';
@@ -30,21 +50,42 @@
     line-height: 1.16;
     letter-spacing: 0.05em;
 
-    color: #303030;
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
   }
 
   &__list {
-    display: flex;
-    margin-left: -30px;
+    @media screen and (max-width: 1199px) {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      margin-left: -30px;
+    }
   }
 
   &__item {
-    width: calc(100% / 3 - 15px);
-    margin-left: 30px;
+    @media screen and (max-width: 1199px) {
+      margin-left: auto;
+      margin-right: auto;
+
+      &:not(:last-child) {
+        margin-bottom: 64px;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      width: calc(100% / 3 - 15px);
+      margin-left: 30px;
+    }
   }
 
   &__img {
     margin-bottom: 30px;
+    @media screen and (max-width: 1199px) {
+    }
   }
 }
 
@@ -59,8 +100,6 @@
     font-size: 18px;
     line-height: 1.38;
     letter-spacing: 0.02em;
-
-    color: $main-text;
   }
 
   &__text {
