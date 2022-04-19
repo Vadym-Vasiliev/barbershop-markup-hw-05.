@@ -65,10 +65,18 @@
   background-position: center;
   background-size: cover;
 
+  @media screen and (max-width: 1199px) {
+    width: 350px;
+  }
+
   &__top {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    text-transform: uppercase;
     letter-spacing: 0.1em;
 
     color: $after-line-text;
@@ -94,11 +102,23 @@
     margin-bottom: 20px;
 
     color: $h-text-first;
+
+    @media screen and (max-width: 1199px) {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 1.16;
+    }
   }
 
   &__bottom {
     color: $gray-text;
     max-width: 400px;
     letter-spacing: 0.02em;
+
+    @media screen and(max-width:1199px) {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.62;
+    }
   }
 }

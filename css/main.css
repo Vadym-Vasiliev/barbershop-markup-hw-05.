@@ -527,10 +527,20 @@ img {
   background-size: cover;
 }
 
+@media screen and (max-width: 1199px) {
+  .hero-box {
+    width: 350px;
+  }
+}
+
 .hero-box__top {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
   letter-spacing: 0.1em;
   color: rgba(157, 164, 189, 0.6);
 }
@@ -555,10 +565,26 @@ img {
   color: #ffffff;
 }
 
+@media screen and (max-width: 1199px) {
+  .hero-box__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.16;
+  }
+}
+
 .hero-box__bottom {
   color: #9da4bd;
   max-width: 400px;
   letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: 1199px) {
+  .hero-box__bottom {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.62;
+  }
 }
 
 .about {
