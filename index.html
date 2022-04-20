@@ -24,18 +24,31 @@
           </svg>
         </a>
 
-        <nav class="header__nav">
-          <ul class="header-nav__list">
-            <li class="header-nav__item"><a href="" class="header-nav__link">О нас</a></li>
-            <li class="header-nav__item"><a href="" class="header-nav__link">Услуги и цены</a></li>
-            <li class="header-nav__item"><a href="" class="header-nav__link">Мастера</a></li>
-            <li class="header-nav__item"><a href="" class="header-nav__link">Контакты</a></li>
-          </ul>
-        </nav>
+        <button class="header-btn" type="button" data-menu-button>
+          <svg class="header-btn__svg" width="40" height="40">
+            <use class="header-btn__icon--burger" href="./img/icon/sprite.svg#icon-burger"></use>
+            <use class="header-btn__icon--cross" href="./img/icon/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
 
-        <div class="header-auth">
-          <a href="tel:+380441111111" class="header-auth__link">+38 044 111 11 11</a>
-          <button data-modal-open type="button" class="btn header-auth__btn">онлайн-запись</button>
+        <div class="menu-container" data-menu>
+          <nav class="header__nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__item"><a href="" class="header-nav__link">О нас</a></li>
+              <li class="header-nav__item">
+                <a href="" class="header-nav__link">Услуги и цены</a>
+              </li>
+              <li class="header-nav__item"><a href="" class="header-nav__link">Мастера</a></li>
+              <li class="header-nav__item"><a href="" class="header-nav__link">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <div class="header-auth">
+            <a href="tel:+380441111111" class="header-auth__link">+38 044 111 11 11</a>
+            <button data-modal-open type="button" class="btn header-auth__btn">
+              онлайн-запись
+            </button>
+          </div>
         </div>
       </div>
     </header>
@@ -75,10 +88,47 @@
         <div class="container">
           <ul class="about__list">
             <li class="about__item">
-              <img src="./img/about.jpg" class="about__img" alt="борода" />
+              <picture>
+                <source
+                  srcset="
+                    ./img/adaptive/tab-about-1-min.jpg    1x,
+                    ./img/adaptive/tab-about-1-2x-min.jpg 2x,
+                    ./img/adaptive/tab-about-1-3x-min.jpg 3x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./img/adaptive/desk-about-1-min.jpg    1x,
+                    ./img/adaptive/desk-about-1-2x-min.jpg 2x,
+                    ./img/adaptive/desk-about-1-3x-min.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <img src="./img/about.jpg" class="about__img" alt="борода" />
+              </picture>
             </li>
             <li class="about__item">
-              <img src="./img/about2.jpg" class="about__img" alt="стрижка" />
+              <picture>
+                <source
+                  srcset="
+                    ./img/adaptive/tab-about-2-min.jpg    1x,
+                    ./img/adaptive/tab-about-2-2x-min.jpg 2x,
+                    ./img/adaptive/tab-about-2-3x-min.jpg 3x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./img/adaptive/desk-about-2-min.jpg    1x,
+                    ./img/adaptive/desk-about-2-2x-min.jpg 2x,
+                    ./img/adaptive/desk-about-2-3x-min.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img src="./img/about2.jpg" class="about__img" alt="стрижка" />
+              </picture>
             </li>
           </ul>
 
@@ -204,7 +254,34 @@
 
           <ul class="masters__list">
             <li class="masters__item">
-              <img src="./img/master.jpg" class="masters__img" alt="барбер стрижет клиента" />
+              <picture>
+                <source
+                  srcset="
+                    ./img/adaptive/mob-masters-1-min.jpg    1x,
+                    ./img/adaptive/mob-masters-1-2x-min.jpg 2x,
+                    ./img/adaptive/mob-masters-1-3x-min.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./img/adaptive/tab-masters-1-min.jpg    1x,
+                    ./img/adaptive/tab-masters-1-2x-min.jpg 2x,
+                    ./img/adaptive/tab-masters-1-3x-min.jpg 3x
+                  "
+                  media="(min-width: 768px) and (max-width:1199px)"
+                />
+                <source
+                  srcset="
+                    ./img/adaptive/desk-masters-1-min.jpg    1x,
+                    ./img/adaptive/desk-masters-1-2x-min.jpg 2x,
+                    ./img/adaptive/desk-masters-1-3x-min.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <img src="./img/master.jpg" class="masters__img" alt="барбер стрижет клиента" />
+              </picture>
 
               <div class="masters-under">
                 <h3 lang="en" class="masters-under__title same-text-second">John Smith</h3>
@@ -244,7 +321,35 @@
             </li>
 
             <li class="masters__item">
-              <img src="./img/master2.jpg" class="masters__img" alt="барбер стрижет клиента" />
+              <picture>
+                <source
+                  srcset="
+                    ./img/adaptive/mob-masters-2-min.jpg    1x,
+                    ./img/adaptive/mob-masters-2-2x-min.jpg 2x,
+                    ./img/adaptive/mob-masters-2-3x-min.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./img/adaptive/tab-masters-2-min.jpg    1x,
+                    ./img/adaptive/tab-masters-2-2x-min.jpg 2x,
+                    ./img/adaptive/tab-masters-2-3x-min.jpg 3x
+                  "
+                  media="(min-width: 768px) and (max-width:1199px)"
+                />
+                <source
+                  srcset="
+                    ./img/adaptive/desk-masters-2-min.jpg    1x,
+                    ./img/adaptive/desk-masters-2-2x-min.jpg 2x,
+                    ./img/adaptive/desk-masters-2-3x-min.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <img src="./img/master2.jpg" class="masters__img" alt="барбер стрижет клиента" />
+              </picture>
+
               <div class="masters-under">
                 <h3 lang="en" class="masters-under__title same-text-second">Michele Doe</h3>
                 <p lang="en" class="masters-under__text">Extreme Barber</p>
@@ -282,7 +387,35 @@
               </div>
             </li>
             <li class="masters__item">
-              <img src="./img/master3.jpg" class="masters__img" alt="барбер стрижет клиента" />
+              <picture>
+                <source
+                  srcset="
+                    ./img/adaptive/mob-masters-3-min.jpg    1x,
+                    ./img/adaptive/mob-masters-3-2x-min.jpg 2x,
+                    ./img/adaptive/mob-masters-3-3x-min.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./img/adaptive/tab-masters-3-min.jpg    1x,
+                    ./img/adaptive/tab-masters-3-2x-min.jpg 2x,
+                    ./img/adaptive/tab-masters-3-3x-min.jpg 3x
+                  "
+                  media="(min-width: 768px) and (max-width:1199px)"
+                />
+                <source
+                  srcset="
+                    ./img/adaptive/desk-masters-3-min.jpg    1x,
+                    ./img/adaptive/desk-masters-3-2x-min.jpg 2x,
+                    ./img/adaptive/desk-masters-3-3x-min.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <img src="./img/master3.jpg" class="masters__img" alt="барбер стрижет клиента" />
+              </picture>
+
               <div class="masters-under">
                 <h3 lang="en" class="masters-under__title same-text-second">Alan Black</h3>
                 <p lang="en" class="masters-under__text">Extreme Barber</p>
@@ -331,40 +464,121 @@
 
           <ul class="portfolio__list">
             <li class="portfolio__item">
-              <img
-                class="portfolio__img"
-                src="./img/gallery.jpg"
-                width="270"
-                height="360"
-                alt="барбер стрижет клиента"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/adaptive/mob-gallery-1-min.jpg    1x,
+                    ./img/adaptive/mob-gallery-1-2x-min.jpg 2x,
+                    ./img/adaptive/mob-gallery-1-3x-min.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./img/adaptive/tab-gallery-1-min.jpg    1x,
+                    ./img/adaptive/tab-gallery-1-2x-min.jpg 2x,
+                    ./img/adaptive/tab-gallery-1-3x-min.jpg 3x
+                  "
+                  media="(min-width: 768px) and (max-width:1199px)"
+                />
+                <source
+                  srcset="
+                    ./img/adaptive/desk-gallery-1-min.jpg    1x,
+                    ./img/adaptive/desk-gallery-1-2x-min.jpg 2x,
+                    ./img/adaptive/desk-gallery-1-3x-min.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <img class="portfolio__img" src="./img/gallery.jpg" alt="барбер стрижет клиента" />
+              </picture>
             </li>
             <li class="portfolio__item">
-              <img
-                class="portfolio__img"
-                src="./img/gallery2.jpg"
-                width="270"
-                height="360"
-                alt="барбер стрижет клиента"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/adaptive/mob-gallery-2-min.jpg    1x,
+                    ./img/adaptive/mob-gallery-2-2x-min.jpg 2x,
+                    ./img/adaptive/mob-gallery-2-3x-min.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./img/adaptive/tab-gallery-2-min.jpg    1x,
+                    ./img/adaptive/tab-gallery-2-2x-min.jpg 2x,
+                    ./img/adaptive/tab-gallery-2-3x-min.jpg 3x
+                  "
+                  media="(min-width: 768px) and (max-width:1199px)"
+                />
+                <source
+                  srcset="
+                    ./img/adaptive/desk-gallery-2-min.jpg    1x,
+                    ./img/adaptive/desk-gallery-2-2x-min.jpg 2x,
+                    ./img/adaptive/desk-gallery-2-3x-min.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img class="portfolio__img" src="./img/gallery2.jpg" alt="барбер стрижет клиента" />
+              </picture>
             </li>
             <li class="portfolio__item">
-              <img
-                class="portfolio__img"
-                src="./img/gallery3.jpg"
-                width="270"
-                height="360"
-                alt="барбер стрижет клиента"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/adaptive/mob-gallery-3-min.jpg    1x,
+                    ./img/adaptive/mob-gallery-3-2x-min.jpg 2x,
+                    ./img/adaptive/mob-gallery-3-3x-min.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./img/adaptive/tab-gallery-3-min.jpg    1x,
+                    ./img/adaptive/tab-gallery-3-2x-min.jpg 2x,
+                    ./img/adaptive/tab-gallery-3-3x-min.jpg 3x
+                  "
+                  media="(min-width: 768px) and (max-width:1199px)"
+                />
+                <source
+                  srcset="
+                    ./img/adaptive/desk-gallery-3-min.jpg    1x,
+                    ./img/adaptive/desk-gallery-3-2x-min.jpg 2x,
+                    ./img/adaptive/desk-gallery-3-3x-min.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img class="portfolio__img" src="./img/gallery3.jpg" alt="барбер стрижет клиента" />
+              </picture>
             </li>
             <li class="portfolio__item">
-              <img
-                class="portfolio__img"
-                src="./img/gallery4.jpg"
-                width="270"
-                height="360"
-                alt="барбер стрижет клиента"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/adaptive/mob-gallery-4-min.jpg    1x,
+                    ./img/adaptive/mob-gallery-4-2x-min.jpg 2x,
+                    ./img/adaptive/mob-gallery-4-3x-min.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./img/adaptive/tab-gallery-4-min.jpg    1x,
+                    ./img/adaptive/tab-gallery-4-2x-min.jpg 2x,
+                    ./img/adaptive/tab-gallery-4-3x-min.jpg 3x
+                  "
+                  media="(min-width: 768px) and (max-width:1199px)"
+                />
+                <source
+                  srcset="
+                    ./img/adaptive/desk-gallery-4-min.jpg    1x,
+                    ./img/adaptive/desk-gallery-4-2x-min.jpg 2x,
+                    ./img/adaptive/desk-gallery-4-3x-min.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img class="portfolio__img" src="./img/gallery4.jpg" alt="барбер стрижет клиента" />
+              </picture>
             </li>
           </ul>
         </div>
@@ -470,7 +684,7 @@
       </div>
     </footer>
 
-    <!-- BACKDROP_MODAL -->
+    <!-- BACKDROP_MODAL
     <div class="backdrop backdrop--is-hidden" data-modal>
       <div class="backdrop-modal">
         <button
@@ -506,8 +720,8 @@
         </form>
         <button class="backdrop-modal__btn" type="submit">Отправить</button>
       </div>
-    </div>
+    </div> -->
 
-    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

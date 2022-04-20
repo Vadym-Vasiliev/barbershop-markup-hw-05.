@@ -16,6 +16,10 @@ body {
 
   background-color: var(--bgc-main);
   color: var(--main-text);
+
+  &.menu-open {
+    overflow: hidden;
+  }
 }
 
 a {
@@ -38,6 +42,5 @@ ol {
 
 img {
   display: block;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
 }

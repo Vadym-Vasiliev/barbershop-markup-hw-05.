@@ -113,6 +113,7 @@
   @media screen and (max-width: 1199px) {
     margin-bottom: 44px;
   }
+
   &__pre {
     margin-bottom: 20px;
     display: flex;
@@ -139,13 +140,17 @@
   &__title {
     font-family: 'Raleway';
     margin-bottom: 20px;
-    width: 483px;
     font-weight: 700;
     font-size: 42px;
     line-height: 1.16;
     letter-spacing: 0.05em;
+    width: 483px;
 
     color: $main-text;
+
+    @media screen and(max-width:767px) {
+      width: 418px;
+    }
   }
 
   &__after {
@@ -156,5 +161,9 @@
     line-height: 1.67;
 
     color: $second-text;
+
+    @media screen and(max-width:767px) {
+      width: 418px;
+    }
   }
 }

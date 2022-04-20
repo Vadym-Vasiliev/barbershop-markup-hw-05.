@@ -26,11 +26,12 @@
     @media screen and (max-width: 1199px) {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
     }
   }
 
   &__item {
-    width: 270px;
+    min-width: 270px;
 
     &:not(:last-child) {
       @media screen and (max-width: 1199px) {
@@ -46,13 +47,6 @@
   }
 
   &__img {
-    height: 100%;
-
-    @media screen and(max-width:1199px) {
-      width: 330px;
-      height: 235px;
-    }
-
     @media screen and (max-width: 767px) {
       display: none;
     }

@@ -1,6 +1,86 @@
+// CONTACTS_WRAP
+
+.contacts-wrap {
+  @media screen and(min-width:1200px) {
+    background-size: calc(100% / 2 - 15px) 100%;
+    background-position: right;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  & > .container {
+    @media screen and (max-width: 1199px) {
+      flex-direction: column;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
 .contacts {
   flex-grow: 1;
-  padding-left: 39px;
+  padding-left: 40px;
+
+  background-repeat: no-repeat;
+  background-color: #191c26;
+  background-position: bottom;
+
+  // MOBILE
+
+  @media screen and (max-width: 767px) {
+    background-image: url(../img/adaptive/mob-contacts-1.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../img/adaptive/mob-contacts-1-2x.png);
+    }
+    @media screen and (min-device-pixel-ratio: 3),
+      (min-resolution: 288dpi),
+      (min-resolution: 3dppx) {
+      background-image: url(../img/adaptive/mob-contacts-1-3x.png);
+    }
+  }
+
+  // TAB
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../img/adaptive/tab-contacts-1.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../img/adaptive/tab-contacts-1-2x.png);
+    }
+    @media screen and (min-device-pixel-ratio: 3),
+      (min-resolution: 288dpi),
+      (min-resolution: 3dppx) {
+      background-image: url(../img/adaptive/tab-contacts-1-3x.png);
+    }
+  }
+
+  // DESKTOP
+
+  @media screen and (min-width: 1200px) {
+    background-image: url(../img/adaptive/desk-contacts-1.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../img/adaptive/desk-contacts-1-2x.png);
+    }
+    @media screen and (min-device-pixel-ratio: 3),
+      (min-resolution: 288dpi),
+      (min-resolution: 3dppx) {
+      background-image: url(../img/adaptive/desk-contacts-1-3x.png);
+    }
+  }
 
   @media screen and (min-width: 1200px) {
     padding-top: 130px;
@@ -10,6 +90,7 @@
   @media screen and (max-width: 1199px) {
     padding-top: 100px;
     padding-bottom: 100px;
+    background-size: cover;
   }
 
   @media screen and (max-width: 767px) {
