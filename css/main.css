@@ -371,6 +371,12 @@ img {
   align-items: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .header > .container {
+    justify-content: space-between;
+  }
+}
+
 .header__logo {
   color: #303030;
   display: block;
@@ -428,19 +434,34 @@ img {
   display: none;
 }
 
-.menu-container {
-  transform: translateX(0);
+@media screen and (max-width: 767px) {
+  .menu-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    padding: 118px 49px;
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .menu-container.is-open {
+    background-color: #fff;
+    transform: translateX(0);
+  }
 }
 
-.menu-container.is-open {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 70%;
-  padding: 118px 49px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: #fff;
+@media screen and (min-width: 1200px) {
+  .menu-container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -452,16 +473,23 @@ img {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .header-nav__list {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .header-nav__list {
     display: flex;
     margin-left: 70px;
+    margin-right: 315px;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .header-nav__list {
-    display: none;
+    margin-top: 10px;
   }
 }
 
@@ -490,15 +518,15 @@ img {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .header-auth {
-    margin-left: auto;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .header-auth {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-auth {
+    margin-left: auto;
   }
 }
 
@@ -542,7 +570,12 @@ img {
   align-items: flex-end;
   padding-left: 24px;
   padding-bottom: 40px;
-  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .hero-soc {
+    display: none;
+  }
 }
 
 .hero-soc__list {

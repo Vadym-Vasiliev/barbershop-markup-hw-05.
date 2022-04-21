@@ -11,7 +11,9 @@
   padding-left: 24px;
   padding-bottom: 40px;
 
-  display: none;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 
   &__list {
     width: 93px;

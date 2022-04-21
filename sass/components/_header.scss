@@ -7,6 +7,10 @@
   & > .container {
     display: flex;
     align-items: center;
+
+    @media screen and (min-width: 1200px) {
+      justify-content: space-between;
+    }
   }
 
   &__logo {
@@ -68,19 +72,29 @@
 // MENU
 
 .menu-container {
-  transform: translateX(0);
-
-  &.is-open {
+  @media screen and (max-width: 767px) {
     position: fixed;
     top: 0;
     right: 0;
-    height: 100%;
     width: 70%;
+    height: 100%;
     padding: 118px 49px;
 
-    transition: transform 250ms $cubic;
+    transform: translateX(100%);
+    transition: transform 250ms $cubic, background-color 250ms $cubic;
 
-    background-color: #fff;
+    &.is-open {
+      background-color: #fff;
+      transform: translateX(0);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
   }
 }
 
@@ -95,13 +109,18 @@
       margin-top: -30px;
     }
 
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
     @media screen and (min-width: 1200px) {
       display: flex;
       margin-left: 70px;
+      margin-right: 315px;
     }
 
-    @media screen and (max-width: 767px) {
-      display: none;
+    @media screen and (min-width: 768px) {
+      margin-top: 10px;
     }
   }
 
@@ -128,12 +147,12 @@
     align-items: center;
   }
 
-  @media screen and (min-width: 1200px) {
-    margin-left: auto;
-  }
-
   @media screen and (max-width: 767px) {
     display: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
   }
 
   &__link {
