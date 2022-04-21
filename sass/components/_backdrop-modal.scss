@@ -22,7 +22,6 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(0.9);
 
-  width: 528px;
   height: 581px;
   padding: 40px;
   opacity: 1;
@@ -33,6 +32,13 @@
   transition: transform 250ms $cubic, opacity 250ms $cubic, visibility 250ms $cubic;
 
   background-color: #fff;
+
+  @media screen and (max-width: 767px) {
+    width: 460px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 528px;
+  }
 
   & {
     transform: translate(-50%, -50%) scale(1);

@@ -78,6 +78,10 @@
     right: 0;
     width: 70%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     padding: 118px 49px;
 
     transform: translateX(100%);
@@ -109,10 +113,6 @@
       margin-top: -30px;
     }
 
-    @media screen and (max-width: 767px) {
-      display: none;
-    }
-
     @media screen and (min-width: 1200px) {
       display: flex;
       margin-left: 70px;
@@ -122,14 +122,38 @@
     @media screen and (min-width: 768px) {
       margin-top: 10px;
     }
+
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+      margin-bottom: 64px;
+      margin-left: 0;
+      margin-top: 0;
+      margin-right: 0;
+      width: 200px;
+    }
   }
 
   &__item:not(:last-child) {
     margin-right: 40px;
+
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
   }
 
   &__link {
     @include header-link;
+
+    @media screen and (max-width: 767px) {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 1.38;
+      letter-spacing: 0.1em;
+
+      color: #000000;
+    }
 
     &:hover,
     &:focus {
@@ -141,22 +165,34 @@
 // HEADER_AUTH
 
 .header-auth {
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-  }
-
-  @media screen and (max-width: 767px) {
-    display: none;
   }
 
   @media screen and (min-width: 1200px) {
     margin-left: auto;
   }
 
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 64px;
+  }
+
   &__link {
     @include header-link;
+
+    @media screen and (max-width: 767px) {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 1.38;
+      letter-spacing: 0.1em;
+      margin-bottom: 24px;
+
+      color: #000000;
+    }
 
     &:hover,
     &:focus {
@@ -174,6 +210,56 @@
       margin-left: 40px;
     }
 
+    @media screen and (max-width: 767px) {
+      color: #000000;
+      width: 194px;
+      margin-bottom: 0;
+    }
+
     color: $btn-text-first;
+  }
+}
+
+// SOC_WRAP
+
+.header-soc-wrap {
+  margin-left: 100px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  &__list {
+    position: relative;
+  }
+
+  &__item {
+    &--before-line::before {
+      position: absolute;
+      right: calc(100% + 40px);
+      top: 15%;
+      content: '';
+      width: 60px;
+      height: 1px;
+
+      background-color: #303030;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.35;
+    letter-spacing: 0.2em;
+    display: block;
+
+    color: #303030;
+
+    &:hover,
+    &:focus {
+      color: $accent;
+    }
   }
 }

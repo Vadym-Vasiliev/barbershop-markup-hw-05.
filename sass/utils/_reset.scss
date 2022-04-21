@@ -17,6 +17,7 @@ body {
   background-color: var(--bgc-main);
   color: var(--main-text);
 
+  &.modal-open,
   &.menu-open {
     overflow: hidden;
   }

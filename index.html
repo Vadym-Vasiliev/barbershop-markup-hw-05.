@@ -49,6 +49,28 @@
               онлайн-запись
             </button>
           </div>
+          <div class="header-soc-wrap">
+            <ul class="header-soc-wrap__list">
+              <li class="header-soc-wrap__item header-soc-wrap__item--before-line">
+                <a
+                  href=""
+                  class="header-soc-wrap__link"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="header-soc-wrap__item">
+                <a
+                  href=""
+                  class="header-soc-wrap__link"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -667,24 +689,27 @@
     <!-- footer -->
     <footer class="footer">
       <div class="container">
-        <p class="footer__text">&#169; Copyright 2020</p>
+        <div class="footer-wrap">
+          <p class="footer__text">&#169; Copyright 2020</p>
 
-        <ul class="footer__list">
-          <li class="footer__item footer__item--line">
-            <a href="" target="_blank" class="footer__link" rel="noopener noreferrer nofollow"
-              >Instagram</a
-            >
-          </li>
-          <li class="footer__item">
-            <a href="" target="_blank" class="footer__link" rel="noopener noreferrer nofollow"
-              >Youtube</a
-            >
-          </li>
-        </ul>
+          <ul class="footer__list">
+            <li class="footer__item footer__item--line">
+              <a href="" target="_blank" class="footer__link" rel="noopener noreferrer nofollow"
+                >Instagram</a
+              >
+            </li>
+            <li class="footer__item">
+              <a href="" target="_blank" class="footer__link" rel="noopener noreferrer nofollow"
+                >Youtube</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
 
-    <!-- BACKDROP_MODAL
+    <!-- BACKDROP_MODAL -->
+
     <div class="backdrop backdrop--is-hidden" data-modal>
       <div class="backdrop-modal">
         <button
@@ -720,8 +745,9 @@
         </form>
         <button class="backdrop-modal__btn" type="submit">Отправить</button>
       </div>
-    </div> -->
+    </div>
 
+    <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
   </body>
 </html>
