@@ -1,28 +1,25 @@
-// CONTACTS_WRAP
-
-.contacts-wrap {
-  background-color: #191c26;
-  background-image: url(../img/online.png);
-  background-repeat: no-repeat;
-  background-size: calc(100% / 2 - 15px) 100%;
-  background-position: right;
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
-
-  & > .container {
-    display: flex;
-  }
-}
-
 // ONLINE
 
 .online {
-  width: calc((100% / 2) + 15px);
-  padding-top: 130px;
-  padding-bottom: 130px;
-
   background-color: $bgc-online;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+    width: calc((100% / 2) + 15px);
+    padding-left: 58px;
+  }
+  @media screen and (max-width: 1199px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 
   &__title {
     margin-bottom: 44px;
@@ -36,6 +33,14 @@
   }
 
   &__btn {
+    @media screen and (max-width: 1199px) {
+      display: block;
+    }
+    @media screen and (max-width: 767px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     color: $btn-text-first;
   }
 }
@@ -43,11 +48,18 @@
 // ONLINE_FORM
 
 .contacts-form {
-  margin-bottom: 44px;
-
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 44px;
+  }
   &__wrap {
     display: flex;
     margin-bottom: 44px;
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+    }
   }
 
   &__field:not(:last-child) {
@@ -60,9 +72,24 @@
 
   &__input {
     @include contacts-form;
+    @media screen and (max-width: 1199px) {
+      width: 330px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 418px;
+      margin-bottom: 44px;
+    }
 
     &--tel {
       width: 260px;
+      @media screen and (max-width: 1199px) {
+        width: 330px;
+      }
+
+      @media screen and (max-width: 767px) {
+        width: 418px;
+      }
     }
 
     .contacts-form__field:hover & {
@@ -86,6 +113,10 @@
 
     color: rgba(157, 164, 189, 0.4);
 
+    @media screen and (max-width: 767px) {
+      top: 20%;
+    }
+
     .contacts-form__input:focus + &,
     .contacts-form__input:not(:placeholder-shown) + & {
       color: #fff;
@@ -108,6 +139,14 @@
     padding: 8px 8px 8px 4px;
 
     transition: border-color 250ms linear;
+
+    @media screen and (max-width: 1199px) {
+      width: 690px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 418px;
+    }
 
     &::placeholder {
       text-transform: uppercase;

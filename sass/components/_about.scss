@@ -1,25 +1,55 @@
 .about {
-  padding-top: 139px;
-  padding-bottom: 121px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 139px;
+    padding-bottom: 121px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
 
   & > .container {
-    display: flex;
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
   }
 
   &__list {
     display: flex;
+
+    @media screen and (max-width: 1199px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__item {
-    width: 270px;
+    min-width: 270px;
+
+    &:not(:last-child) {
+      @media screen and (max-width: 1199px) {
+        margin-bottom: 30px;
+      }
+    }
 
     & + & {
-      margin-left: 30px;
+      @media screen and (min-width: 1200px) {
+        margin-left: 30px;
+      }
     }
   }
 
   &__img {
-    height: 100%;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
 }
 
@@ -28,11 +58,20 @@
 .about-box {
   margin-left: 64px;
 
+  @media screen and (max-width: 1199px) {
+    margin-left: 30px;
+  }
+
   &__top {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    letter-spacing: 0.02em;
+
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 
     &::before {
       content: '';
@@ -49,26 +88,48 @@
   &__title {
     font-family: 'Raleway';
     margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.16;
     letter-spacing: 0.05em;
 
-    color: $h-text-second;
+    @media screen and (max-width: 1199px) {
+      font-size: 28px;
+      line-height: 1.17;
+    }
   }
 
   &__bottom {
     margin-bottom: 20px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
     letter-spacing: 0.02em;
 
     color: $second-text;
+
+    @media screen and (max-width: 1199px) {
+      font-size: 16px;
+      line-height: 1.62;
+      width: 330px;
+    }
   }
 
   &__text {
+    margin-bottom: 40px;
+
     font-weight: 400;
     font-size: 14px;
     line-height: 1.86;
-    margin-bottom: 40px;
     letter-spacing: 0.02em;
 
     color: $second-text;
+
+    @media screen and (max-width: 1199px) {
+      width: 330px;
+    }
   }
 
   &__btn {
